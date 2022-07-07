@@ -1,13 +1,23 @@
 .movieCard {
   display: grid; 
   height: 345px;
-  width: 400px;
   grid-auto-columns: 1fr; 
   grid-template-columns: 1fr 1fr; 
-  grid-template-rows: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1px; 
   grid-template-areas: 
     "photo ."
+    "photo ."
     "photo ."; 
+}
+
+.movieCard__rating {
+  position: absolute;
+  color: white;
+  background-color: green;
+}
+
+.movieCard__description {
+  color: #777;
 }
 
 .movieCard__image {

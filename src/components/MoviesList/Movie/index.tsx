@@ -12,8 +12,9 @@ export const MovieCard = (props: Props) => {
   return (
     <div className={ styles.movieCard }>
       <img className={ styles.movieCard__image } src={ movie.medium_cover_image ?? 'medium-cover.jpg' } />
-      <h1>{ movie.title }</h1>
-      <h2>{ movie.rating }</h2>
+      <h1 className={ styles.movieCard__title }>{ movie.title }</h1>
+      <h2 className={styles.movieCard__description}> { movie.description_full.substring(0, 100) + '...'} </h2>
+      <h3 className={ styles.movieCard__rating }>{ movie.rating }</h3>
     </div>
   )
 }

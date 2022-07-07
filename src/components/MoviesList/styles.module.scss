@@ -1,4 +1,7 @@
 .movies {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   height: 1800px;
   max-width: 500px;
   width: 100%;
