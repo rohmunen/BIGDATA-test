@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   entry:'./src/index.tsx',
   output: {
-    path: __dirname + '/dist'
+    path: __dirname + '/public'
   },
   module: {
     rules: [
@@ -32,6 +32,5 @@ module.exports = {
     new HtmlWebpackPlugin ({
         template : 'public/index.html'
     })
-  ] 
-
+  ],
 }

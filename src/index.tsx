@@ -2,6 +2,11 @@ import { Loader, Pagination } from '@mantine/core'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom/client'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 import { Movie } from '../types'
 import { MainLayout } from './components/Layout'
 import { MoviesList } from './components/MoviesList'
@@ -38,5 +43,17 @@ const App = () => {
 }
 
 root.render(
-  <App />
+  <BrowserRouter>
+    <Routes>
+      <Route path='/' element={ <App /> } />
+      <Route
+        path="/xd"
+        element={
+          <main style={ { padding: "1rem" } }>
+            <p>There's nothing here!</p>
+          </main>
+        }
+      />
+    </Routes>
+  </BrowserRouter>
 )
