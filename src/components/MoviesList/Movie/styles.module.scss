@@ -1,0 +1,17 @@
+.movieCard {
+  display: grid; 
+  height: 345px;
+  width: 400px;
+  grid-auto-columns: 1fr; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr; 
+  grid-template-areas: 
+    "photo ."
+    "photo ."; 
+}
+
+.movieCard__image {
+  grid-area: photo;
+  height: 345px;
+  width: 230px;
+}

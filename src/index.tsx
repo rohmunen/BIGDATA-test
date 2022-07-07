@@ -16,13 +16,13 @@ const App = () => {
 
   useEffect(() => {
     axios.get(`https://yts.mx/api/v2/list_movies.json?page=${currentPage}&limit=10`).then(res => {
-      setTotal(Math.floor(res.data.data.movie_count / 10) + 1)
+      setTotal(Math.floor(res.data.data.movie_count / 5) + 2)
     })
   }, [])
 
   useEffect(() => {
     setLoading(true)
-    axios.get(`https://yts.mx/api/v2/list_movies.json?page=${currentPage}&limit=10`).then(res => {
+    axios.get(`https://yts.mx/api/v2/list_movies.json?page=${currentPage}&limit=5`).then(res => {
       setMovies(res.data.data.movies)
       setLoading(false)
     }
