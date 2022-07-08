@@ -20,7 +20,9 @@ export const Inputs = (props: Props) => {
         placeholder="Ваш комментарий"
         onChange={ (e) => { setForm({ ...form, message: e.target.value }) } }
       />
-      <Button onClick={ () => { setComments(oldComments => [ ...oldComments, form ]) } } />
+      <Button onClick={ () => { setComments(oldComments => [ ...oldComments, form ]) } } >
+        Оставить комментарий
+      </Button>
     </div>
   )
 }

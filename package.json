@@ -5,6 +5,7 @@
   "author": "Daniil Salyn <salyndaniil@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@svgr/webpack": "^6.2.1",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "css-loader": "^6.7.1",
@@ -22,6 +23,7 @@
     "@mantine/core": "^4.2.12",
     "@mantine/hooks": "^4.2.12",
     "axios": "^0.27.2",
+    "classnames": "^2.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",

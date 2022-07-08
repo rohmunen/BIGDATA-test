@@ -1,4 +1,5 @@
 .movieCard {
+  position: relative;
   display: grid; 
   height: 345px;
   grid-auto-columns: 1fr; 
@@ -14,6 +15,9 @@
   position: absolute;
   color: white;
   background-color: green;
+  width: 30px;
+  text-align: center;
+  left: -5px;
 }
 
 .movieCard__description {

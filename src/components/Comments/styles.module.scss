@@ -1,0 +1,12 @@
+.commentSVG {
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.comments {
+  display: none;
+  &.open{
+    display: block;
+  }
+}
