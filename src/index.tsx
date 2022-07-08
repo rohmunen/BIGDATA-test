@@ -10,6 +10,7 @@ import {
 import { Movie } from '../types'
 import { MainLayout } from './components/Layout'
 import { MoviesList } from './components/MoviesList'
+import { NotFound } from './components/NotFound';
 
 const root = ReactDOM.createRoot(document.getElementById('root')!)
 
@@ -47,12 +48,8 @@ root.render(
     <Routes>
       <Route path='/' element={ <App /> } />
       <Route
-        path="/xd"
-        element={
-          <main style={ { padding: "1rem" } }>
-            <p>There's nothing here!</p>
-          </main>
-        }
+        path="*"
+        element={ <NotFound /> }
       />
     </Routes>
   </BrowserRouter>

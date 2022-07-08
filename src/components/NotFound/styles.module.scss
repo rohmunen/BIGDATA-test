@@ -1,0 +1,11 @@
+.NotFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.NotFound__message {
+  font-size: 25px;
+}
