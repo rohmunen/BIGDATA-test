@@ -11,7 +11,16 @@
     "photo ."; 
 }
 
+.movieCard__title, .movieCard__description {
+  margin: 0;
+}
+
 .movieCard__commentSVG {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &:hover{
     cursor: pointer;
   }
