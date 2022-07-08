@@ -10,7 +10,7 @@ type Props = {
 
 export const CommentCard = (props: Props) => {
   const { setComments } = props
-  const { author, message } = props.comment
+  const { author, message, id } = props.comment
   return (
     <div className={ styles.comment }>
       <div className={ styles.comment__author } data-testid="author">
@@ -24,7 +24,7 @@ export const CommentCard = (props: Props) => {
       className={styles.comment__delete}
       radius="xl" 
       size="xs" 
-      onClick={ () => { setComments(prevComments => prevComments.filter(x => x.author !== author || x.message !== message))}}
+      onClick={ () => { setComments(prevComments => prevComments.filter(x => x.id !== id))}}
       data-testid="delete-button"
       >
         X

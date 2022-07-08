@@ -8,7 +8,7 @@ type Props = {
 }
 
 export const Inputs = (props: Props) => {
-  const [ form, setForm ] = useState<Comment>({ author: '', message: '' })
+  const [ form, setForm ] = useState<Comment>({ author: '', message: '', id:0})
   const { setComments } = props
   return (
     <div className={ styles.Input }>
@@ -26,7 +26,7 @@ export const Inputs = (props: Props) => {
       />
       <Button
         className={ styles.Input__button }
-        onClick={ () => { setComments(oldComments => [ ...oldComments, form ]) } }
+        onClick={ () => { setComments(oldComments => [ ...oldComments, {...form, id: oldComments.length} ]) } }
         data-testid="comment-button"
       >
         Оставить комментарий
