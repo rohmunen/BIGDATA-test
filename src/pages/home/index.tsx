@@ -5,6 +5,7 @@ import { NotFound } from '../../components/NotFound';
 import { Loader, Pagination } from '@mantine/core'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import styles from './styles.module.scss'
 
 
 export const Home = () => {
@@ -15,7 +16,7 @@ export const Home = () => {
 
   useEffect(() => {
     axios.get(`https://yts.mx/api/v2/list_movies.json?page=${currentPage}&limit=10`).then(res => {
-      setTotal(Math.floor(res.data.data.movie_count / 5) + 2)
+      setTotal(Math.floor(res.data.data.movie_count / 5) + 1)
     })
   }, [])
 
@@ -31,7 +32,7 @@ export const Home = () => {
   return (
     <MainLayout>
       <MoviesList movies={ movies } loading={ loading } />
-      <Pagination page={ currentPage } onChange={ setCurrentPage } total={ total } />
+      <Pagination className={styles.pagination} page={ currentPage } onChange={ setCurrentPage } total={ total } />
     </MainLayout>
   )
 }
