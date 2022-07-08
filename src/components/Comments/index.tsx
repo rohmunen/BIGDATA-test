@@ -20,7 +20,7 @@ export const Comments = () => {
         <div className={ styles.comments__list }>
           {
             comments.map(comment => {
-              return (<CommentCard comment={ comment } />)
+              return (<CommentCard comment={ comment } setComments={setComments} />)
             })
           }
         </div>
