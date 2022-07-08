@@ -20,7 +20,7 @@ export const CommentCard = (props: Props) => {
         { message }
       </p>
       <Button 
-      color="red" 
+      className={styles.comment__delete}
       radius="xl" 
       size="xs" 
       onClick={ () => { setComments(prevComments => prevComments.filter(x => x.author !== author || x.message !== message))} }>

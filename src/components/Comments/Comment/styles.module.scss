@@ -1,0 +1,21 @@
+.comment {
+  display: grid; 
+  grid-template-columns: 10fr 1fr; 
+  grid-template-rows: 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". ."
+    "message message"; 
+}
+
+.comment__message {
+  grid-area: message;
+}
+
+.comment__delete {
+  background: transparent;
+  color: black;
+  &:hover {
+    background-color: transparent;
+  }
+}
