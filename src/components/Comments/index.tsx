@@ -13,16 +13,14 @@ export const Comments = (props: Props) => {
   const [ comments, setComments ] = useState<Array<Comment>>([])
   const { open } = props
   return (
-    <div>
-      <div className={ cn(styles.comments, open ? styles.open : undefined) }>
-        <Inputs setComments={ setComments } />
-        <div className={ styles.comments__list }>
-          {
-            comments.map(comment => {
-              return (<CommentCard comment={ comment } setComments={ setComments } />)
-            })
-          }
-        </div>
+    <div className={ cn(styles.comments, open ? styles.open : undefined) }>
+      <Inputs setComments={ setComments } />
+      <div className={ styles.comments__list }>
+        {
+          comments.map(comment => {
+            return (<CommentCard key={comment.author + comment.message} comment={ comment } setComments={ setComments } />)
+          })
+        }
       </div>
     </div>
   )

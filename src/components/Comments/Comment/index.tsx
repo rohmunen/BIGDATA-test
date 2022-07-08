@@ -13,18 +13,20 @@ export const CommentCard = (props: Props) => {
   const { author, message } = props.comment
   return (
     <div className={ styles.comment }>
-      <p className={ styles.comment__author }>
+      <div className={ styles.comment__author } data-testid="author">
         <div className={styles.comment__avatar} />
         { author }
-      </p>
-      <p className={ styles.comment__message }>
+      </div>
+      <p className={ styles.comment__message } data-testid="message">
         { message }
       </p>
       <Button 
       className={styles.comment__delete}
       radius="xl" 
       size="xs" 
-      onClick={ () => { setComments(prevComments => prevComments.filter(x => x.author !== author || x.message !== message))} }>
+      onClick={ () => { setComments(prevComments => prevComments.filter(x => x.author !== author || x.message !== message))}}
+      data-testid="delete-button"
+      >
         X
       </Button>
     </div>
