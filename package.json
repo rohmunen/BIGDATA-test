@@ -25,7 +25,7 @@
     "webpack-dev-server": "^4.9.3"
   },
   "scripts": {
-    "start": "webpack serve --port 3000 --history-api-fallback",
+    "start": "jest && webpack serve --port 3000 --history-api-fallback",
     "test": "jest"
   },
   "dependencies": {
