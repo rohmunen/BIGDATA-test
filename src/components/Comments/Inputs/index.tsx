@@ -11,7 +11,7 @@ export const Inputs = (props: Props) => {
   const [ form, setForm ] = useState<Comment>({ author: '', message: '', id:0})
   const { setComments } = props
   return (
-    <div className={ styles.Input }>
+    <div className={ styles.input }>
       <TextInput
         value={ form.author }
         data-testid="nickname-input"
@@ -25,7 +25,7 @@ export const Inputs = (props: Props) => {
         onChange={ (e) => { setForm(form => ({ ...form, message: e.target.value })) } }
       />
       <Button
-        className={ styles.Input__button }
+        className={ styles.input__button }
         onClick={ () => { setComments(oldComments => [ ...oldComments, {...form, id: oldComments.length} ]) } }
         data-testid="comment-button"
       >
