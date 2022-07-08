@@ -16,7 +16,7 @@ export const Home = () => {
 
   useEffect(() => {
     axios.get(`https://yts.mx/api/v2/list_movies.json?page=${currentPage}&limit=10`).then(res => {
-      setTotal(Math.floor(res.data.data.movie_count / 5) + 1)
+      setTotal(Math.ceil(res.data.data.movie_count / 5))
     })
   }, [])
 
