@@ -31,6 +31,11 @@ module.exports = {
         issuer: /\.[jt]sx?$/,
         use: [{ loader: '@svgr/webpack', options: { icon: true } }],
       },
+      {
+        test: /\.js$/,
+        enforce: "pre",
+        use: ["source-map-loader"],
+      },
     ],
   },
   mode:'development',
