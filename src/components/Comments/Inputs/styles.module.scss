@@ -1,0 +1,11 @@
+.Input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Input__button {
+  position: relative;
+  max-width: 200px;
+  align-self: flex-end;
+}
