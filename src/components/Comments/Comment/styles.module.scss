@@ -12,6 +12,23 @@
   grid-area: message;
 }
 
+.comment__author, .comment__message{
+  margin: 0;
+}
+
+.comment__avatar {
+  background: grey;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+}
+
+.comment__author {
+  display: flex;
+  gap: 10px;
+  font-weight: bold;
+}
+
 .comment__delete {
   background: transparent;
   color: black;

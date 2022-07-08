@@ -14,6 +14,7 @@ export const CommentCard = (props: Props) => {
   return (
     <div className={ styles.comment }>
       <p className={ styles.comment__author }>
+        <div className={styles.comment__avatar} />
         { author }
       </p>
       <p className={ styles.comment__message }>
