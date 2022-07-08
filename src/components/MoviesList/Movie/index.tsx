@@ -23,7 +23,7 @@ export const MovieCard = (props: Props) => {
         <h1 className={ styles.movieCard__title }>{ movie.title }</h1>
         <h2 className={ styles.movieCard__description }> { movie.description_full.substring(0, 100) + '...' } </h2>
         <div className={ styles.movieCard__commentSVG } onClick={ () => { toggle() } }>
-            <CommentSVG />
+          <CommentSVG />
         </div>
       </div>
       <Comments open={ open } />
