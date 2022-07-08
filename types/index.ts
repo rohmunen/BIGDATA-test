@@ -4,3 +4,8 @@ export type Movie = {
   description_full: string,
   medium_cover_image: string,
 }
+
+export type Comment = {
+  author: string,
+  message: string,
+}
