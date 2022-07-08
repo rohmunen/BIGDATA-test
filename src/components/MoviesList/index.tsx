@@ -20,7 +20,7 @@ export const MoviesList = (props: Props) => {
           :
           movies.map(movie => {
             return (
-              <MovieCard movie={ movie } />
+              <MovieCard key={movie.id} movie={ movie } />
             )
           }) }
     </div>
