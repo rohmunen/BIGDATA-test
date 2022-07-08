@@ -1,5 +1,5 @@
 import { Button } from '@mantine/core'
-import React, { useState } from 'react'
+import React from 'react'
 import type { Comment } from '../../../../types'
 import styles from "./styles.module.scss"
 

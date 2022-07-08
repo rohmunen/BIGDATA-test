@@ -1,12 +1,15 @@
-.commentSVG {
-  &:hover{
-    cursor: pointer;
-  }
-}
-
 .comments {
   display: none;
   &.open{
     display: block;
+  }
+}
+
+@media screen and (max-width: 600px)  {
+  .comments {
+    max-width: 230px;
+  }
+  .comments__list {
+    margin-top: 10px;
   }
 }
