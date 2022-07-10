@@ -26,7 +26,7 @@ export const MovieCard = (props: Props) => {
           <CommentSVG />
         </div>
       </div>
-      <Comments open={ open } />
+      <Comments open={ open } movieId={ movie.id } />
     </>
 
   )

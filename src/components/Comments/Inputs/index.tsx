@@ -2,14 +2,17 @@ import React, { useState } from 'react'
 import type { Comment } from '../../../../types'
 import styles from "./styles.module.scss"
 import { Button, TextInput } from '@mantine/core';
+import { createComment } from '../../../api/comments'
+import {v4 as uuid} from 'uuid'
 
 type Props = {
   setComments: React.Dispatch<React.SetStateAction<Comment[]>>,
+  movieId: number,
 }
 
 export const Inputs = (props: Props) => {
-  const [ form, setForm ] = useState<Comment>({ author: '', message: '', id:0})
-  const { setComments } = props
+  const [ form, setForm ] = useState<Comment>({ author: '', message: '', id: '' })
+  const { setComments, movieId } = props
   return (
     <div className={ styles.input }>
       <TextInput
@@ -26,7 +29,10 @@ export const Inputs = (props: Props) => {
       />
       <Button
         className={ styles.input__button }
-        onClick={ () => { setComments(oldComments => [ ...oldComments, {...form, id: oldComments.length} ]) } }
+        onClick={ () => {
+          setComments(oldComments => [ ...oldComments, { ...form, id: uuid() } ])
+          createComment(movieId, form)
+        } }
         data-testid="comment-button"
       >
         Оставить комментарий

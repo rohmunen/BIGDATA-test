@@ -7,7 +7,7 @@ export type Movie = {
 }
 
 export type Comment = {
-  id: number,
+  id: string,
   author: string,
   message: string,
 }

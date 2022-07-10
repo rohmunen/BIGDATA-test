@@ -10,5 +10,6 @@ RUN yarn install
 COPY . .
 # Expose port
 EXPOSE 3000
+EXPOSE 3001
 # Start the app
 CMD ["yarn", "start"]
